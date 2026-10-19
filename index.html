@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan UTS</title>
+</head>
+<body>
+    <header>
+        <h1>Kafe Koding Nusantara</h1>
+        <p>Pesan Makanan dan Minuman Favoritmu</p>
+    </header>
+    <nav>
+        <buttton class="filter-btn active" onclick="filterMenu('semua', this)">Semua Menu</buttton>
+        <buttton class="filter-btn" onclick="filterMenu('makanan', this)">Makanan</buttton>
+        <buttton class="filter-btn" onclick="filterMenu('minuman', this)">Minuman</buttton>
+    </nav>
+    <main>
+        <section id="menu-list" class="grid-container">
+            <div class="card" data-kategori="makanan" data-harga="25000">
+                <h3>Nasi Goreng Spesial</h3>
+                <p class="harga">25000</p>
+                <button class="add-btn" onclick="tambahpesanan(25000)">Tambah</button>
+            </div>
+            <div class="card" data-kategori="minuman" data-harga="15000">
+                <h3>Es Kopi Susu</h3>
+                <p class="harga">15000</p>
+                <button class="add-btn" onclick="tambahpesanan(15000)">Tambah</button>
+            </div>
+            <div class="card" data-kategori="makanan" data-harga="20000">
+                <h3>Nasi Goreng Tek Tek</h3>
+                <p class="harga">20000</p>
+                <button class="add-btn" onclick="tambahpesanan(20000)">Tambah</button>
+            </div>
+            <div class="card" data-kategori="minuman" data-harga="10000">
+                <h3>Es Teh Manis</h3>
+                <p class="harga">10000</p>
+                <button class="add-btn" onclick="tambahpesanan(10000)">Tambah</button>
+            </div>
+        </section>
 
+        <section class="summary-selection">
+            <h2>Ringkasan Keranjang</h2>
+            <div class="summary-info">
+                <p>Total Item: <strong id="total-item">0</strong></p>
+                <p>Total Harga: <strong id="total-harga">Rp 0,00</strong></p>
+            </div>
+            <button class="reset-btn" onclick="resetPesanan()">Reset Pesanan</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kafe Koding Nusantara. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
